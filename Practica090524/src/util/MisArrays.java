@@ -6,11 +6,13 @@ public class MisArrays {
 //Jose Arenas Venegas
 	
     public static int mediaNotas(int[] notas) {
+    	int media = 0;
         int sum = 0;
         for (int nota : notas) {
             sum += nota;
         }
-        return sum / notas.length;
+        media= sum / notas.length;
+        return media;
     }
     
     public static int medianaNotas(int[] notas) {
@@ -25,6 +27,15 @@ public class MisArrays {
         return mediana;
     }
 
-    
+    public static int maximaNota(int[] notas) {
+        int max = 0;
+        for (int nota : notas) {
+            if (nota > max) {
+                max = nota;
+            }
+        }
+        return max;
+    }
+
     
 }
