@@ -8,12 +8,12 @@ import util.MisArrays;
 
 public class TestPractica {
     private static int[] notasValidas;
-    private static int[] notasNoValidas;
+    private static int[] notasInvalidas;
 
     @BeforeAll
     public static void setUp() {
         notasValidas = new int[] { 8, 7, 6, 9, 10 };
-        notasNoValidas = new int[] { 8, 7, 6, 9, 11 };
+        notasInvalidas = new int[] { 8, 7, 6, 9, 11 };
     }
 
     @Test
@@ -25,7 +25,7 @@ public class TestPractica {
     @Test
     public void testMediaNotasValoresInvalidos() {
         assertThrows(IllegalArgumentException.class, () -> {
-            MisArrays.mediaNotas(notasNoValidas);
+            MisArrays.mediaNotas(notasInvalidas);
         });
     }
 
@@ -38,7 +38,7 @@ public class TestPractica {
     @Test
     public void testMedianaNotasValoresInvalidos() {
         assertThrows(IllegalArgumentException.class, () -> {
-            MisArrays.medianaNotas(notasNoValidas);
+            MisArrays.medianaNotas(notasInvalidas);
         });
     }
 
@@ -51,7 +51,7 @@ public class TestPractica {
     @Test
     public void testMaximaNotaValoresInvalidos() {
         assertThrows(IllegalArgumentException.class, () -> {
-            MisArrays.maximaNota(notasNoValidas);
+            MisArrays.maximaNota(notasInvalidas);
         });
     }
 
@@ -62,9 +62,9 @@ public class TestPractica {
     }
 
     @Test
-    public void testMinimaNotaValoresNoValidos() {
+    public void testMinimaNotaValoresInvalidos() {
         assertThrows(IllegalArgumentException.class, () -> {
-            MisArrays.minimaNota(notasNoValidas);
+            MisArrays.minimaNota(notasInvalidas);
         });
     }
 }
